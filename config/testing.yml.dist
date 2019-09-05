@@ -14,7 +14,7 @@ application:
   date_format: m-d-Y
   coc_link: http://confcodeofconduct.com
   show_contrib_banner: true
-  venue_image_path: /assets/img/venue.jpg
+  venue_image_path: /assets/img/background.svg
 
   organization: Chalten Technologies
   orgurl: chalten.io
