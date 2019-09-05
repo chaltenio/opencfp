@@ -1,0 +1,48 @@
+{% extends "layouts/reviewer.twig" %}
+{% block content %}
+
+    <div class="flex mb-8">
+        <img class="w-16 h-16 mr-4 rounded-full" src="{{ speaker.photo ? uploads(speaker.photo) : '/assets/img/dummyphoto.jpg' }}">
+        <div>
+            <h1 class="-mt-2">
+                {% if speaker.isAllowedToSee('name') %}{{ speaker.name }}{% else %}Unknown Speaker{% endif %}
+            </h1>
+
+            <div>
+                {% if speaker.isAllowedToSee('company') and speaker.company %}<span class="mr-3"><i class="fa fa-building"></i> {{ speaker.company }}</span>{% endif %}
+                {% if speaker.isAllowedToSee('twitter') and speaker.twitter %}<span class="mr-3"><a class="hover:text-brand" target="_blank" href="{{ speaker.twitterUrl }}" rel="noopener noreferrer"><i class="fa fa-twitter"></i> @{{ speaker.twitter }}</a></span>{% endif %}
+                {% if speaker.isAllowedToSee('email') and speaker.email %}<span class="mr-3"><i class="fa fa-envelope"></i> {{ speaker.email }}</span>{% endif %}
+            </div>
+        </div>
+    </div>
+
+    <div class="flex">
+        <div class="w-1/2 mr-4">
+            <h3><i class="fa fa-file-text-o"></i> Speaker Bio</h3>
+            {% if speaker.isAllowedToSee('bio') %}{{ speaker.bio|striptags|markdown }} {% endif %}
+        </div>
+        <div class="w-1/2">
+            {% if talks | length > 0 %}
+                <h3><i class="fa fa-bullhorn"></i> Talk Submissions</h3>
+
+                {% for talk in talks %}
+                    <a class="text-brand block mb-3" href="{{ url('reviewer_talk_view', { id: talk.id }) }}">{{ talk.title }}</a>
+                {% endfor %}
+            {% endif %}
+
+            {% if site.online_conference == false %}
+                <h3 class="mt-3">Other Information</h3>
+                {% if speaker.isAllowedToSee('transportation') %}<strong>Need Transportation:</strong> {% if speaker.transportation == '1' %} Yes {% else %} No {% endif %}<br /> {% endif %}
+                {% if speaker.isAllowedToSee('hotel') %}<strong>Need Hotel:</strong> {% if speaker.hotel == '1' %} Yes {% else %} No {% endif %} {% endif %}
+            {% endif %}
+
+            {% if speaker.isAllowedToSee('info') and  speaker.info is not empty %}
+                <h3>Additional Notes</h3>
+                <p>{{ speaker.info | striptags | markdown }}</p>
+            {% endif %}
+        </div>
+    </div>
+
+
+</div>
+{% endblock %}
