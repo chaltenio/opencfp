@@ -4,17 +4,18 @@
     <header id="hero" class="bg-cover p-24" style="background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url({{ site.venue_image_path }}) no-repeat center -300px / cover fixed;">
         <div class="container mx-auto flex">
             <div class="p-8 bg-brand text-white">
+                <h1>{{ site.title }}</h1>            
                 {% if cfp_open %}
-                    <h1>Call For Papers Now Open!</h1>
+                    <h2>Call For Papers Now Open!</h2>
                     <p>Submissions accepted until {{ site.enddate | date(site.date_format) }}</p>
                 {% else %}
-                    <h1>
+                    <h2>
                         {% if site.show_submission_count %}
                             Call for Papers ended with {{ number_of_talks }} submissions!
                         {% else %}
                             Call for Papers has ended!
                         {% endif %}
-                    </h1>
+                    </h2>
                     <p>Submissions were accepted until {{ site.enddate }}</p>
                 {% endif %}
 
@@ -29,7 +30,7 @@
     <div class="container mx-auto">
         <div class="flex justify-between items-center px-4 py-6">
             {% if site.event_location is defined and site.date_format is defined %}
-                <p>{{ site.title }} is from <span class="text-bold">{{ site.arrival|date(site.date_format, false) }}</span> to <span class="text-bold">{{ site.departure|date(site.date_format, false) }}</span> in {{ site.event_location }}</p>
+                <p> {{ site.title }} is from <span class="text-bold">{{ site.arrival|date(site.date_format, false) }}</span> to <span class="text-bold">{{ site.departure|date(site.date_format, false) }}</span> in {{ site.event_location }}</p>
             {%  else %}
                 <p>For More Information About The Conference</p>
             {% endif %}

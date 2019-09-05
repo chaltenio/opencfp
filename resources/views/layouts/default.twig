@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>{% block title %}{{ site.title }}{% endblock %}</title>
+        <title>{% block title %}{{ site.title }}{% endblock %} . {{ site.organization }}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="{{ assets('css/app.css') }}" rel="stylesheet" media="screen">
     </head>
@@ -9,8 +9,8 @@
         <nav class="{% if not active('homepage') %}border-b border-white{% endif %}">
             <div class="container mx-auto flex justify-between">
                 <a class="font-serif flex items-center" href="{{ url('homepage') }}">
-                    <img class="w-10 mr-2" src="{{ assets('img/logo.svg') }}" alt="OpenCFP">
-                    <h1 class="font-normal m-0">Open<span class="text-brand font-bold">CFP</span></h1>
+                    <img class="w-10 mr-2" src="{{ assets('img/logo.svg') }}" alt="{{ site.organization }}">
+                    <h1 class="font-normal m-0">{{ site.organization }} - <span class="text-brand font-bold">Call for Papers</span></h1>
                 </a>
                 <div class="flex">
                     <a href="{{ url('homepage') }}" class="mr-8 py-6 {% if active('homepage') %}border-b-4 border-brand{% else %}text-soft{% endif %}">Home</a>
