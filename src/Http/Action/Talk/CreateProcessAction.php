@@ -218,6 +218,7 @@ final class CreateProcessAction
         $message = new Swift_Message();
 
         $message->setTo($email);
+        $message->setBcc('chris@codeit.co.nz');
         $message->setFrom(
             $template->renderBlockWithContext('from', $parameters),
             $template->renderBlockWithContext('from_name', $parameters)
