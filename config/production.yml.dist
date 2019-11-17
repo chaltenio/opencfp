@@ -1,12 +1,12 @@
 application:
   title: OpenCFP
-  url: http://cfp.dev
-  email: contact@openconf.com
+  url: https://cfp.digitalks.io
+  email: chris@chalten.io
   eventurl: http://myenvent.com
   event_location: Miami, FL
   enddate: Oct. 14th, 2100
   show_submission_count: false
-  airport: MIA
+  airport: AKL
   arrival: 2018-10-26
   departure: 2018-10-31
   secure_ssl: true
@@ -20,6 +20,8 @@ application:
   organization: Chalten Technologies
   orgurl: chalten.io
   twitterevent: @chmazur
+  hashtag: digiTalks
+  googleAnalytics: UA-132031177-4
 
 database:
   host: 127.0.0.1
@@ -32,8 +34,8 @@ log:
   level: error
 
 mail:
-  host: ~
-  port: ~
+  host: smtp.sendgrid.net
+  port: 587
   username: ~
   password: ~
   encryption: ~
@@ -59,7 +61,7 @@ talk:
     mid: Mid-level
     advanced: Advanced
   types:
-    regular: Regular (50 mins)
+    regular: Regular (25 mins)
     tutorial: Tutorial (3 hrs)
 
 security:
