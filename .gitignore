@@ -27,3 +27,4 @@ infection-log.txt
 infection.json
 docker-compose.yml
 Homestead.yaml
+/mysql_backups
