@@ -2,21 +2,11 @@
 {% block content %}
 <div class="container">
     <h2>{{ site.title }} Speaker Information</h2>
-    <p>
-        We're committed to bringing together some of the best speakers from all around the
-        world to share their knowledge with you here. 
-    </p>
-    <h3>About the event</h3>
 
-    <p>Our inaugural {{ site.title }} is from <span class="text-bold">{{ site.arrival|date(site.date_format, false) }}</span> 
+    <p>{{ site.title }} will be held from <span class="text-bold">{{ site.arrival|date(site.date_format, false) }}</span> 
     to <span class="text-bold">{{ site.departure|date(site.date_format, false) }}</span> in {{ site.event_location }}.
-    Speakers from all around the world, best companies of the industry and the amazing members 
-    from the local community will be gathering for this event. </p>
+    Speakers from all around the world, leading projects and enterprise companies in the service mesh ecosystem and the amazing members from the local community will be gathering for the second edition of SMD. </p>
 
-    <p>
-        Speakers should bring any equipment they need to connect to projectors. It is also suggested that you reduce your
-        dependency on the in-house internet connection as possible. 
-    </p>
     <p>
         When the Call for Papers closes, the organizers will sort through the submissions, making
         their selections. Speakers will be notified as soon as the selection process has been completed.
@@ -26,27 +16,26 @@
         Our speaker package for this year's event includes:
     </p>
     <ul>
-        <li>Full conference pass</li>
+        <li>Full pre-conference & conference passes</li>
         <li>Invitation to the speakers dinner</li>
         <li>For international speakers</li>
         <ul>
-            <li>Complimentary airfare - depending on arrangements (If granted assistance, you will be expected to organise and purchase travel yourself and await reimbursement after conference)</li>
-            <li>2 complimentary hotel nights in Auckland (additional hotel night for speakers presenting a tutorial)</li>
+            <li>
+                If you cannot get reimbursed by your company please select the hotel & flight options in the registration form accordingly to your requiriments. Speaker reimbursements for travel and accommodation will be needs-based and please note that because of budget restrictions, we can only financially support a limited number of speakers.
+            </li>            
         </ul>
         <li>Lunch, receptions and activities included in regular conference</li>
-        <li>The opportunity to visit New Zealand and its many attractions</li>
+        <li>The opportunity to visit Melbourne and its many attractions</li>
 
     </ul>
     <p>
-        International speakers are encouraged to <a href="/">submit their ideas</a>, but because of budget restrictions,
-        we can only financially support a limited number of speakers.
+        All speakers are encouraged to <a href="/">submit their ideas</a>, but because of budget restrictions, we can only financially support a limited number of speakers.
     </p>
     <h3>Tips for Submission</h3>
     <p>
         We <i>strongly</i> encourage potential speakers to submit more than one submission on more than one topic. The
         more submissions you contribute, the more options you give us to pick you. Be sure your talk title and abstract
-        define the exact topic you want to talk about and what you hope people will learn from the session. In previous
-        years, some submissions sounded interesting but we just didn't have enough detail for them to make the final cut.
+        define the exact topic you want to talk about and what you hope people will learn from the session. Not a Sales Pitch please.
     </p>
 </div>
 {% endblock %}
