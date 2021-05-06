@@ -27,10 +27,10 @@
             <input id="form-user-url" type="text" name="url" placeholder="https://example.com" value="{{ url | default('') }}">
 
             {% if site.online_conference == false %}
-                <h3 class="text-base text-dark-soft mt-4">Travel Assistance</h3>
+                <h3 class="text-base text-dark-soft mt-4">Travel Assistance (Applies to NZ based speakers only)</h3>
                 <div>
                     <input id="form-transportation" name="transportation" type="checkbox" value="1" {% if transportation == '1' %}checked{% endif %}>
-                    <label for="form-transportation" class="text-base text-normal text-dark">I need help with flight cost</label>
+                    <label for="form-transportation" class="text-base text-normal text-dark">I need help with domestic flight cost</label>
                 </div>
                 <div>
                     <input id="form-hotel" name="hotel" type="checkbox" value="1" {% if hotel == '1' %}checked{% endif %}>

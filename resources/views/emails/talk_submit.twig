@@ -12,19 +12,22 @@
 </p>
 <p>&nbsp;</p>
 <p>
-    Thanks and all the best!<br><br>
-    &nbsp;&nbsp;The {{ title }} Team.<br><br><br>
+    Thanks and all the best!<br/><br/>
+    &nbsp;&nbsp;The {{ title }} Team.<br/><br/>
+    Please feel free to share the Call For Papers with colleagues, friends and network. We would appreciate your support! <br />
     Join the discussion on Twitter: #{{ site.hashtag }} / @{{ site.twitterevent }}
 </p>
 {% endblock %}
 
 {% block body_text %}
-    Thank you for the awesome talk submission. When the call for papers is over on {{ enddate | date(site.date_format) }} talk selection will begin. We'll be in touch soon.
+Thank you for the awesome talk submission. When the call for papers is over on {{ enddate | date(site.date_format) }} talk selection will begin. We'll be in touch soon.
 
 Submitted Talk Title: "{{ talk }}"
 
 Thanks and all the best!
-  The {{ title }} Team.
+The {{ title }} Team.
 
- Join the discussion on Twitter: #{{ site.hashtag }} / @{{ site.twitterevent }}
+Please feel free to share the Call For Papers with colleagues, friends and network. We would appreciate your support! 
+
+Join the discussion on Twitter: #{{ site.hashtag }} / @{{ site.twitterevent }}
 {% endblock %}

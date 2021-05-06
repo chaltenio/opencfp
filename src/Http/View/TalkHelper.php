@@ -51,18 +51,31 @@ class TalkHelper
 
         if ($categories === null) {
             $categories = [
-                'onezeroone' => 'Service Mesh 101',
-                'coredevelopment' => 'Service Mesh Core development',
-                'security' => 'Service Mesh Security',
-                'performance' => 'Service Mesh Performance',
-                'scalability' => 'Service Mesh Scalability',
-                'monitoring' => 'Service Mesh Monitoring',
-                'development' => 'Service Mesh for development team',
-                'operations' => 'Service Mesh for operations team',
-                'deployment' => 'Service Mesh Deployment Processes',
-                'implementations' => 'Service Mesh Enterprise implementations - Case studies',
-                'cloud' => 'Service Mesh Public, private & multicloud',
-                'community' => 'Service Mesh Community',
+
+                'api' => 'APIs',
+                'architecturedesign' => 'Architecture & Design',
+                'automation' => 'Automation',
+                'bigdataanalytics' => 'Big Data & Analytics',
+                'cloudTechnologies' => 'Cloud Technologies',
+                'containertechnology' => 'Container Technology',
+                'continuousdelivery' => 'Continuous Delivery',
+                'database' => 'Database',
+                'development' => 'Development',
+                'devops' => 'Devops',
+                'envirosust' => 'Environmental Sustainability',
+                'framework' => 'Frameworks-related topics',
+                'iot' => 'IoT',
+                'javascript' => 'JavaScript',
+                'languagesdev' => 'Programming Languages',
+                'loggingmonitoring' => 'Logging & Monitoring',
+                'microservices' => 'Microservices',
+                'mobile' => 'Mobile Development',
+                'personal' => 'Professional Development',
+                'security' => 'Security',
+                'serverless' => 'Serverless',
+                'servicemesh' => 'ServiceMesh',
+                'testing' => 'Testing',
+                'uiux' => 'UI/UX',
                 'other' => 'Other',
             ];
         }
@@ -96,6 +109,9 @@ class TalkHelper
             $types = [
                 'regular'  => 'Regular',
                 'tutorial' => 'Tutorial',
+                'lightningtalk'  => 'Lightning talk',
+                'regularOnline' => 'Regular Online',
+                'tutorial' => 'Tutorial Online',
             ];
         }
 

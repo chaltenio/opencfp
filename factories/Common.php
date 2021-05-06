@@ -38,7 +38,7 @@ $factory->define(\OpenCFP\Domain\Model\Talk::class, function (\Faker\Generator $
         'title'       => $faker->sentence(),
         'description' => $faker->realText(),
         'other'       => $faker->realText(),
-        'type'        => $faker->randomElement(['regular', 'tutorial']),
+        'type'        => $faker->randomElement(['regular', 'tutorial', 'lightningtalk', 'regularOnline', 'tutorialOnline']),
         'level'       => $faker->randomElement(['entry', 'mid', 'advanced']),
         'category'    => $faker->randomElement(['api', 'database', 'development', 'testing']),
     ];
